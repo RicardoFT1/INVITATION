@@ -2,11 +2,11 @@
 body {
   font-family: 'Open Sans', Arial, sans-serif, ;
   text-align: center;
-  background-color: #ffa7e1;
+  background-color: #ffa7b7;
   background-image: url("images/mama.jpeg");
   background-repeat: no-repeat;
   background-position: center;
-  background-size: 100% 100%;
+  background-size: 98% 98%;
   margin: 0;
   padding: 0;
   height: 100vh;
@@ -235,8 +235,8 @@ button.confirm:hover {
     
     .oso {
     background-image: url("images/oso.png");
-    top: 20%;
-    right: 20%;
+    top: 10%;
+    right: 50%;
     animation-name: moveOso;
     background-repeat: no-repeat;
     z-index: -1;
@@ -253,7 +253,7 @@ button.confirm:hover {
     
     .carriola {
     background-image: url("images/carriola.png");
-    top: 20%;
+    top: 50%;
     right: 50%;
     animation-name: moveCarriola;
     background-repeat: no-repeat;
@@ -271,7 +271,7 @@ button.confirm:hover {
     
     .cuna {
     background-image: url("images/cuna.png");
-    bottom: 20%;
+    bottom: 60%;
     right: 20%;
     animation-name: moveCuna;
     background-repeat: no-repeat;
