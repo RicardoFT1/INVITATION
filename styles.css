@@ -1,21 +1,22 @@
 /* General styles */
 body {
-  font-family: 'Open Sans', Arial, sans-serif;
+  font-family: 'Open Sans', Arial, sans-serif, ;
   text-align: center;
-  background-color: #f0f0f0;
-  background-image: url("images/mama.svg");
+  background-color: #ffa7e1;
+  background-image: url("images/mama.jpeg");
   background-repeat: no-repeat;
   background-position: center;
-  background-size: cover;
+  background-size: 100% 100%;
   margin: 0;
   padding: 0;
+  height: 100vh;
 }
 
 header h1 {
   font-size: 3em;
   margin-top: 1em;
   margin-bottom: 2em;
-  color: #33ffe4;
+  color: #5e5ee5;
   text-shadow: 2px 2px #ccc;
   animation: falling-title 1s ease-in-out;
 }
@@ -234,7 +235,7 @@ button.confirm:hover {
     
     .oso {
     background-image: url("images/oso.png");
-    top: 50%;
+    top: 20%;
     right: 20%;
     animation-name: moveOso;
     background-repeat: no-repeat;
@@ -279,28 +280,28 @@ button.confirm:hover {
     
     @keyframes moveDragon {
     0% {
-    transform: translate(-100%, 80%);
+    transform: translate(-80%, 5%);
     }
     100% {
-    transform: translate(200%, 20%);
+    transform: translate(200%, 5%);
     }
     }
     
     @keyframes moveOso {
     0% {
-    transform: translate(-100%, 60%);
+    transform: translate(-100%, 5%);
     }
     100% {
-    transform: translate(200%, 30%);
+    transform: translate(200%, 5%);
     }
     }
     
     @keyframes moveBiberon {
     0% {
-    transform: translate(100%, 80%);
+    transform: translate(100%, 5%);
     }
     100% {
-    transform: translate(-200%, 20%);
+    transform: translate(-200%, 5%);
     }
     }
     
@@ -329,4 +330,58 @@ button.confirm:hover {
     100% {
     transform: translate(-200%, 90%);
     }
+    }
+
+    h1 {
+      font-size: 48px;
+      font-family: 'Lobster', cursive;
+      color: #ff85c0;
+    }
+    
+    h2 {
+      font-size: 36px;
+      font-family: 'Lobster', cursive;
+      color: #ff85c0;
+    }
+    
+    p {
+      font-size: 24px;
+      font-family: 'Open Sans', Arial, sans-serif;
+      color: #7c7c7c;
+      margin: 16px 0;
+    }
+    
+    .confirm {
+      background-color: #ff85c0;
+      color: #ffffff;
+      font-size: 24px;
+      font-family: 'Open Sans', Arial, sans-serif;
+      padding: 16px 32px;
+      border-radius: 24px;
+      border: none;
+      cursor: pointer;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.25);
+      transition: all 0.3s ease-in-out;
+    }
+    
+    .confirm:hover {
+      transform: scale(1.1);
+      box-shadow: 0 5px 10px rgba(0, 0, 0, 0.5);
+    }
+    
+    .animate__animated {
+      animation-duration: 1s;
+    }
+    
+    .animate__fadeIn {
+      animation-name: fadeIn;
+    }
+    
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+      }
+      to {
+        opacity: 1;
+      }
     }
