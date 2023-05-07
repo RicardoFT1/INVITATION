@@ -1,0 +1,27 @@
+
+{
+  "name": "invitation",
+  "version": "1.0.0",
+  "description": "",
+  "main": "particles.main.js",
+  "scripts": {
+    "start": "node baby-shower-invitation/index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.18.2",
+    "sqlite3": "^5.1.6"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/RicardoFT1/INVITATION.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/RicardoFT1/INVITATION/issues"
+  },
+  "homepage": "https://github.com/RicardoFT1/INVITATION#readme"
+}
