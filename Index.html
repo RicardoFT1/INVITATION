@@ -4,27 +4,35 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Invitación al Baby Shower</title>
+    <!-- Estilos de la página -->
     <link rel="stylesheet" href="styles.css">
+    <!-- Estilos de animación -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <!-- Script para la animación de partículas -->
     <script src="particles.main.js"></script>
-    <script src="scripts.js" defer></script>    
+    <!-- Script para el manejo de regalos -->
+    <script src="gifts.js" defer></script>
 </head>
 <body>
     <header>
       <h1>¡Estás invitad@ a nuestro Baby Shower!</h1>
-    <main>
       <h2>
         En honor a Alana Harmonie Fandiño
       </h2>
     </header>
     <main>
+        <!-- Información del evento -->
         <p class="date animate__animated animate__fadeIn">Únete a nosotros el <strong>03/06/2023</strong> a las <strong>02:00 PM</strong> (Hora Colombia) en nuestra casa.</p>
         <p class="confirmation animate__animated animate__fadeIn">Por favor, confirma tu asistencia antes del <strong>31/05/2023</strong> a las <strong>12:00 PM</strong>.</p>
         <p class="location animate__animated animate__fadeIn">Te esperamos en la dirección: <strong>Carrera 4 # 1-46 Sur Barrio Las Brisas</strong></p>
         <p class="excitement animate__animated animate__fadeIn">¡Vamos a celebrar antes de que los pañales sean la nueva moneda de cambio en casa!</p>
+        
+        <!-- Botón para confirmar asistencia -->
         <div class="buttons">
-          <button class="confirm animate__animated animate__pulse animate__infinite">¡Confirma tu asistencia!</button>
+          <button id="confirmacion" class="confirm animate__animated animate__pulse animate__infinite">¡Confirma tu asistencia!</button>
         </div>
+        
+        <!-- Imágenes de elementos de bebé -->
         <div class="baby-items">
             <div class="item dragon"></div>
             <div class="item oso"></div>
@@ -33,6 +41,14 @@
             <div class="item chupete"></div>
             <div class="item cuna"></div>
         </div>
+        
+        <!-- Lista de regalos (se generará dinámicamente) -->
+        <div id="gifts-list" class="gifts-list animate__animated animate__fadeIn">
+          <!-- La lista de regalos se generará aquí -->
+        </div>
+        
+        <!-- Botón de administrador -->
+        <button id="admin-button" class="admin-button animate__animated animate__fadeIn">Admin</button>
     </main>
 </body>
 </html>

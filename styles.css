@@ -1,17 +1,18 @@
 /* General styles */
 body {
-  font-family: 'Open Sans', Arial, sans-serif, ;
+  font-family: 'Open Sans', Arial, sans-serif;
   text-align: center;
   background-color: #ffa7b7;
   background-image: url("images/mama.jpeg");
-  background-repeat: no-repeat;
+  background-repeat: repeat-y;
   background-position: center;
-  background-size: 98% 98%;
+  background-size: 100% 100%;
   margin: 0;
   padding: 0;
   height: 100vh;
 }
 
+/* Header styles */
 header h1 {
   font-size: 3em;
   margin-top: 1em;
@@ -21,6 +22,7 @@ header h1 {
   animation: falling-title 1s ease-in-out;
 }
 
+/* Main content styles */
 main h2 {
   font-size: 2.5em;
   margin-bottom: 1em;
@@ -35,6 +37,7 @@ main p {
   text-shadow: 1px 1px #ccc;
 }
 
+/* Animation for falling title */
 @keyframes falling-title {
   0% {
     transform: translateY(-100%);
@@ -44,18 +47,7 @@ main p {
   }
 }
 
-.boy {
-  color: blue;
-  text-shadow: 2px 2px #ccc;
-  animation: fallingText 1s ease-in-out;
-}
-
-.girl {
-  color: pink;
-  text-shadow: 2px 2px #ccc;
-  animation: fallingText 1s ease-in-out;
-}
-
+/* Animation for falling text */
 @keyframes fallingText {
   0% {
     transform: translateY(-100%);
@@ -65,6 +57,7 @@ main p {
   }
 }
 
+/* Confirm button styles */
 button.confirm {
   background-color: #a569e2;
   color: #fff;
@@ -87,6 +80,7 @@ button.confirm:hover {
   box-shadow: 0 15px 20px rgba(0,0,0,0.3);
 }
 
+/* Button container styles */
 .buttons {
   margin-top: 50px;
   text-align: center;
@@ -94,6 +88,7 @@ button.confirm:hover {
   z-index: 1000;
 }
 
+/* Blob button styles */
 .blob-btn {
   position: relative;
   display: inline-block;
@@ -112,6 +107,7 @@ button.confirm:hover {
   border-radius: 30px;
 }
 
+/* Crea una forma circular con borde sólido */
 .blob-btn:before {
   content: "";
   z-index: 1;
@@ -124,72 +120,72 @@ button.confirm:hover {
   border-radius: 30px;
 }
 
-  .blob-btn:after {
-    content: "";
-    z-index: -2;
-    position: absolute;
-    left: 3px;
-    top: 3px;
-    width: calc(100% - 6px);
-    height: calc(100% - 6px);
-    background-color: #fff;
-    border-radius: 30px;
-    transition: background-color 0.5s;
-  }
-  
-  .blob-btn:hover {
-    color: #fff;
-  }
-  
-  .blob-btn:hover:before {
-    background-color: #0505A9;
-    animation: blob 1.5s infinite linear;
-  }
-  
-  .blob-btn:hover:after {
-    background-color: #0505A9;
-  }
-  
-  @keyframes blob {
-    0%, 100% {
-      -webkit-transform: scale(1);
-              transform: scale(1);
-      -webkit-animation-timing-function: cubic-bezier(0.5, 0, 0.5, 1);
-              animation-timing-function: cubic-bezier(0.5, 0, 0.5, 1);
-    }
-    50% {
-      -webkit-transform: scale(1.2);
-              transform: scale(1.2);
-      -webkit-animation-timing-function: cubic-bezier(0.5, 0, 0.5, 1);
-              animation-timing-function: cubic-bezier(0.5, 0, 0.5, 1);
-    }
-  }
-  
-  @media screen and (max-width: 600px) {
-    header h1 {
-      font-size: 2.5em;
-    }
-  
-    main h2 {
-      font-size: 2em;
-    }
-  
-    main p {
-      font-size: 1.2em;
-    }
-  
-    button.confirm {
-      font-size: 14px;
-      padding: 8px 16px;
-    }
-  
-    .blob-btn {
-      padding: 16px 32px;
-      font-size: 14px;
-    }
-  }
+/* Crea una forma circular ligeramente más pequeña */
+.blob-btn:after {
+  content: "";
+  z-index: -2;
+  position: absolute;
+  left: 3px;
+  top: 3px;
+  width: calc(100% - 6px);
+  height: calc(100% - 6px);
+  background-color: #fff;
+  border-radius: 30px;
+  transition: background-color 0.5s;
+}
 
-  .baby-items {
+/* Cambia el color del texto y del borde cuando se hace hover */
+.blob-btn:hover {
+  color: #fff;
+}
+
+/* Cambia el color del borde interno cuando se hace hover */
+.blob-btn:hover:before {
+  background-color: #0505A9;
+  animation: blob 1.5s infinite linear;
+}
+
+/* Cambia el color del fondo interno cuando se hace hover */
+.blob-btn:hover:after {
+  background-color: #0505A9;
+}
+
+/* Define la animación "blob" */
+@keyframes blob {
+  0%, 100% {
+    transform: scale(1);
+    animation-timing-function: cubic-bezier(0.5, 0, 0.5, 1);
+  }
+  50% {
+    transform: scale(1.2);
+    animation-timing-function: cubic-bezier(0.5, 0, 0.5, 1);
+  }
+}
+
+/* Estilos para pantallas pequeñas */
+@media screen and (max-width: 600px) {
+  header h1 {
+    font-size: 2.5em;
+  }
+  main h2 {
+    font-size: 2em;
+  }
+  main p {
+    font-size: 1.2em;
+  }
+  button.confirm {
+    font-size: 14px;
+    padding: 8px 16px;
+  }
+  .blob-btn {
+    padding: 16px 32px;
+    font-size: 14px;
+  }
+}
+
+/* Estilos para la animación de los elementos */
+
+.baby-items {
   position: absolute;
   top: 0;
   left: 0;
@@ -223,165 +219,426 @@ button.confirm:hover {
   }
 }
 
+.dragon {
+  background-image: url("images/dragon.png");
+  top: 20%;
+  left: 20%;
+  animation-name: moveDragon;
+  background-repeat: no-repeat;
+  z-index: -1;
+}
 
-  .dragon {
-    background-image: url("images/dragon.png");
-    top: 20%;
-    left: 20%;
-    animation-name: moveDragon;
-    background-repeat: no-repeat;
-    z-index: -1;
-    }
-    
-    .oso {
-    background-image: url("images/oso.png");
-    top: 10%;
-    right: 50%;
-    animation-name: moveOso;
-    background-repeat: no-repeat;
-    z-index: -1;
-    }
-    
-    .biberon {
-    background-image: url("images/biberon.png");
-    bottom: 20%;
-    left: 50%;
-    animation-name: moveBiberon;
-    background-repeat: no-repeat;
-    z-index: -1;
-    }
-    
-    .carriola {
-    background-image: url("images/carriola.png");
-    top: 50%;
-    right: 50%;
-    animation-name: moveCarriola;
-    background-repeat: no-repeat;
-    z-index: -1;
-    }
-    
-    .chupete {
-    background-image: url("images/chupete.png");
-    bottom: 50%;
-    left: 20%;
-    animation-name: moveChupete;
-    background-repeat: no-repeat;
-    z-index: -1;
-    }
-    
-    .cuna {
-    background-image: url("images/cuna.png");
-    bottom: 60%;
-    right: 20%;
-    animation-name: moveCuna;
-    background-repeat: no-repeat;
-    z-index: -1;
-    }
-    
-    @keyframes moveDragon {
-    0% {
+.oso {
+  background-image: url("images/oso.png");
+  top: 10%;
+  right: 50%;
+  animation-name: moveOso;
+  background-repeat: no-repeat;
+  z-index: -1;
+}
+
+.biberon {
+  background-image: url("images/biberon.png");
+  bottom: 20%;
+  left: 50%;
+  animation-name: moveBiberon;
+  background-repeat: no-repeat;
+  z-index: -1;
+}
+
+.carriola {
+  background-image: url("images/carriola.png");
+  top: 50%;
+  right: 50%;
+  animation-name: moveCarriola;
+  background-repeat: no-repeat;
+  z-index: -1;
+}
+
+.chupete {
+  background-image: url("images/chupete.png");
+  bottom: 50%;
+  left: 20%;
+  animation-name: moveChupete;
+  background-repeat: no-repeat;
+  z-index: -1;
+}
+
+.cuna {
+  background-image: url("images/cuna.png");
+  bottom: 60%;
+  right: 20%;
+  animation-name: moveCuna;
+  background-repeat: no-repeat;
+  z-index: -1;
+}
+
+@keyframes moveDragon {
+  0% {
     transform: translate(-80%, 5%);
-    }
-    100% {
+  }
+  100% {
     transform: translate(200%, 5%);
-    }
-    }
-    
-    @keyframes moveOso {
-    0% {
-    transform: translate(-100%, 5%);
-    }
-    100% {
-    transform: translate(200%, 5%);
-    }
-    }
-    
-    @keyframes moveBiberon {
-    0% {
-    transform: translate(100%, 5%);
-    }
-    100% {
-    transform: translate(-200%, 5%);
-    }
-    }
-    
-    @keyframes moveCarriola {
-    0% {
-    transform: translate(100%, 40%);
-    }
-    100% {
-    transform: translate(-200%, 70%);
-    }
-    }
-    
-    @keyframes moveChupete {
-    0% {
-    transform: translate(-100%, 20%);
-    }
-    100% {
-    transform: translate(200%, 80%);
-    }
-    }
-    
-    @keyframes moveCuna {
-    0% {
-    transform: translate(100%, 10%);
-    }
-    100% {
-    transform: translate(-200%, 90%);
-    }
-    }
+  }
+}
 
-    h1 {
-      font-size: 48px;
-      font-family: 'Lobster', cursive;
-      color: #ff85c0;
-    }
-    
-    h2 {
-      font-size: 36px;
-      font-family: 'Lobster', cursive;
-      color: #ff85c0;
-    }
-    
-    p {
-      font-size: 24px;
-      font-family: 'Open Sans', Arial, sans-serif;
-      color: #7c7c7c;
-      margin: 16px 0;
-    }
-    
-    .confirm {
-      background-color: #ff85c0;
-      color: #ffffff;
-      font-size: 24px;
-      font-family: 'Open Sans', Arial, sans-serif;
-      padding: 16px 32px;
-      border-radius: 24px;
-      border: none;
-      cursor: pointer;
-      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.25);
-      transition: all 0.3s ease-in-out;
-    }
-    
-    .confirm:hover {
-      transform: scale(1.1);
-      box-shadow: 0 5px 10px rgba(0, 0, 0, 0.5);
-    }
-    
-    .animate__animated {
-      animation-duration: 1s;
-    }
-    
-    .animate__fadeIn {
-      animation-name: fadeIn;
-    }
-    
-    @keyframes fadeIn {
-      from {
-        opacity: 0;
-      }
-      to {
-        opacity: 1;
-      }
-    }
+@keyframes moveOso {
+  0% {
+    transform: translate(-100%, 5%);
+  }
+  100% {
+    transform: translate(200%, 5%);
+  }
+}
+
+@keyframes moveBiberon {
+  0% {
+    transform: translate(100%, 5%);
+  }
+  100% {
+    transform: translate(-200%, 5%);
+  }
+}
+
+@keyframes moveCarriola {
+  0% {
+    transform: translate(100%, 40%);
+  }
+  100% {
+    transform: translate(-200%, 70%);
+  }
+}
+
+@keyframes moveChupete {
+  0% {
+    transform: translate(-100%, 20%);
+  }
+  100% {
+    transform: translate(200%, 80%);
+  }
+}
+
+@keyframes moveCuna {
+  0% {
+    transform: translate(100%, 10%);
+  }
+  100% {
+    transform: translate(-200%, 90%);
+  }
+}
+
+/* Estilos para encabezados */
+h1 {
+  font-size: 48px;
+  font-family: 'Lobster', cursive;
+  color: #ff85c0;
+}
+
+h2 {
+  font-size: 36px;
+  font-family: 'Lobster', cursive;
+  color: #ff85c0;
+}
+
+/* Estilos para párrafos */
+p {
+  font-size: 24px;
+  font-family: 'Open Sans', Arial, sans-serif;
+  color: #7c7c7c;
+  margin: 16px 0;
+}
+
+/* Estilos para botón de confirmación */
+.confirm {
+  background-color: #ff85c0;
+  color: #ffffff;
+  font-size: 24px;
+  font-family: 'Open Sans', Arial, sans-serif;
+  padding: 16px 32px;
+  border-radius: 24px;
+  border: none;
+  cursor: pointer;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.25);
+  transition: all 0.3s ease-in-out;
+}
+
+.confirm:hover {
+  transform: scale(1.1);
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.5);
+}
+
+/* Estilos para animación */
+.animate__animated {
+  animation-duration: 1s;
+}
+
+.animate__fadeIn {
+  animation-name: fadeIn;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* Estilos para lista de regalos */
+.gifts-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+  padding: 1rem;
+}
+
+.gift-item {
+  background-color: #f8f8f8;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 1rem;
+  text-align: center;
+  width: 200px;
+}
+
+/* Estilos para elemento seleccionado de la lista de regalos */
+.gift-selected {
+  background-color: #e0e0e0;
+  cursor: not-allowed;
+}
+
+/*-------------------------------------------------Admin HTML -----------------------------------------------*/
+
+/* Estilos para la tabla de regalos */
+table {
+  border-collapse: collapse;
+  margin: 1rem;
+  width: 100%;
+}
+
+th, td {
+  border: 1px solid #ddd;
+  padding: 0.5rem;
+}
+
+th {
+  background-color: #f2f2f2;
+  font-size: 1.2rem;
+}
+
+/* Estilos para el formulario de agregar regalo */
+.add-gift-form-container {
+  margin-bottom: 2rem;
+}
+
+#add-gift-form {
+  display: none;
+}
+
+#add-gift-form.show {
+  display: block;
+}
+
+#add-gift-form label {
+  display: inline-block;
+  width: 150px;
+  margin-right: 1rem;
+}
+
+#add-gift-form input {
+  padding: 0.5rem;
+}
+
+/* Estilos para el botón de agregar regalo */
+.add-gift-form-container button {
+  background-color: #F29A9A;
+  border: none;
+  border-radius: 5px;
+  color: white;
+  cursor: pointer;
+  font-size: 16px;
+  margin-top: 0.5rem;
+  padding: 0.5rem;
+  text-align: center;
+  transition: background-color 0.3s ease;
+  }
+  
+  .add-gift-form-container button:hover {
+  background-color: #C15656;
+  }
+  
+  /* Estilos para la sección de inicio de sesión de administrador */
+  .admin-login-container {
+  background-color: #F2C2B6;
+  padding: 1rem;
+  margin-bottom: 2rem;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+  }
+  
+  .admin-login-container h2 {
+  font-size: 1.5rem;
+  margin: 0;
+  margin-bottom: 0.5rem;
+  }
+  
+  .admin-login-container form {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  width: 100%;
+  }
+  
+  .admin-login-container label {
+  font-size: 1.2rem;
+  font-weight: bold;
+  }
+  
+  .admin-login-container input {
+  padding: 0.5rem;
+  }
+  
+  .admin-login-container button {
+  background-color: #F29A9A;
+  border: none;
+  border-radius: 5px;
+  color: white;
+  cursor: pointer;
+  font-size: 16px;
+  margin-top: 0.5rem;
+  padding: 0.5rem;
+  text-align: center;
+  transition: background-color 0.3s ease;
+  }
+  
+  .admin-login-container button:hover {
+  background-color: #C15656;
+  }
+  
+  /* Estilos para la tabla de regalos */
+  .gift-table-container {
+  background-color: #F2C2B6;
+  padding: 1rem;
+  margin-bottom: 2rem;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+  }
+  
+  .gift-table-container h2 {
+  font-size: 1.5rem;
+  margin: 0;
+  margin-bottom: 0.5rem;
+  }
+  
+  /* Estilos para los elementos de la tabla de regalos */
+  .gift-table-container table {
+  border-collapse: collapse;
+  margin: 0 auto;
+  width: 90%;
+  }
+  
+  .gift-table-container th, .gift-table-container td {
+  border: 1px solid #ddd;
+  padding: 0.5rem;
+  }
+  
+  .gift-table-container th {
+  background-color: #F29A9A;
+  color: white;
+  font-size: 1.2rem;
+  }
+  
+  .gift-table-container td {
+  font-size: 1.1rem;
+  }
+  
+  /* Estilos para los mensajes de alerta */
+  .alert-message {
+  background-color: #F29A9A;
+  color: white;
+  font-weight: bold;
+  padding: 0.5rem;}
+
+  .hidden {
+    display: none;
+  }
+
+
+
+
+
+  /*---------------------------------------------------------------lista regalos----------------------------------*/
+
+  /* Estilos para la lista de regalos */
+.gifts-list {
+  margin-top: 2rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.gift-item {
+  width: 45%;
+  margin-bottom: 1.5rem;
+  border-radius: 5px;
+  box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+  transition: transform 0.3s ease;
+}
+
+.gift-item:hover {
+  transform: translateY(-5px);
+}
+
+.gift-item:not(.available) {
+  opacity: 0.5;
+}
+
+.gift-item img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.gift-item .info {
+  background-color: #F6E9E6;
+  padding: 1rem;
+}
+
+.gift-item h3 {
+  font-size: 1.5rem;
+  margin-top: 0;
+  margin-bottom: 0.5rem;
+}
+
+.gift-item p {
+  font-size: 1.2rem;
+  margin-top: 0;
+  margin-bottom: 0.5rem;
+}
+
+.gift-item .select-button {
+  background-color: #F6E9E6;
+  border: none;
+  border-radius: 5px;
+  color: #8B5B5B;
+  cursor: pointer;
+  font-size: 1rem;
+  padding: 0.5rem;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.gift-item .select-button:hover {
+  background-color: #8B5B5B;
+  color: #F6E9E6;
+}
+
+/* Ordenamiento ascendente según la disponibilidad para seleccionar */
+.gifts-list.available-first .gift-item {
+  order: -1;
+}
+
+.gifts-list.available-first .gift-item:not(.available) {
+  order: 1;
+}
+
